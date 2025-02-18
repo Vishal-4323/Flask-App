@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid black; }
+        form { display: inline; }
+    </style>
+</head>
+<body>
+
+    <h1>User Management</h1>
+
+    <form action="/add" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>Users</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <form action="/update/{{ user.id }}" method="POST">
+                    <input type="text" name="name" value="{{ user.name }}" required>
+                    <input type="email" name="email" value="{{ user.email }}" required>
+                    <button type="submit">Update</button>
+                </form>
+                <form action="/delete/{{ user.id }}" method="POST">
+                    <button type="submit" style="background-color: red; color: white;">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
+
