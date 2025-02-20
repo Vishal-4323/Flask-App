@@ -1,9 +1,6 @@
 # Ignore environment variables
 .env
 
-# Ignore migrations if not sharing
-migrations/
-
 # Ignore other unnecessary files
 mvi
 
