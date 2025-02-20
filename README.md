@@ -1,7 +1,8 @@
 # Flask Application
 
 ### Steps to Run this Application
-- Created a .env file.
+- First, clone this repository in your system.
+- After, created a .env file.
 - And added the database credentials in following format in the file.
 
 ```bash
