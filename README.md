@@ -25,8 +25,8 @@ INSERT INTO users (name, email) VALUES ('Bob', 'bob@example.com');
 ```
 
 ### Run the Application
-- Created a .env file.
-- And added the database credentials in following format in the file.
+- Create a .env file.
+- And add the database credentials in following format in the file.
 ```bash
 DB_HOST=GIVE YOUR DB HOST
 DB_PORT=GIVE YOUR DB PORT
