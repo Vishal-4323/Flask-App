@@ -12,7 +12,7 @@ CREATE DATABASE db_name;
 ```
 - Create a table
 ```bash
-CREATE TABLE users (
+CREATE TABLE "user" (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL
@@ -20,8 +20,8 @@ CREATE TABLE users (
 ```
 - Insert sample data
 ```bash
-INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');
-INSERT INTO users (name, email) VALUES ('Bob', 'bob@example.com');
+INSERT INTO "user" (name, email) VALUES ('Alice', 'alice@example.com');
+INSERT INTO "user" (name, email) VALUES ('Bob', 'bob@example.com');
 ```
 
 ### Run the Application
